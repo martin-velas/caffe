@@ -403,6 +403,12 @@ message LayerParameter {
   optional ThresholdParameter threshold_param = 128;
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
+  optional CompactBilinearParameter compact_bilinear_param=147;
+}
+
+message CompactBilinearParameter {
+  optional uint32 num_output = 1;
+  optional bool sum_pool = 2 [default = true]; 
 }
 
 // Message that stores parameters used to apply transformation
